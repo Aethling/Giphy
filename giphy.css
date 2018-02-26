@@ -1,5 +1,7 @@
 
-
+body {
+	padding: 10px;
+}
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -7,15 +9,15 @@
 }
 .column {
 	flex: 25%;
-	max-width: 25%;
+	max-width: 23%;
+	margin: 10px;
 }
-.column div img {
+.column img {
 	vertical-align: middle;
 	border: 1px solid black;
 	padding: 0px;
-	margin: 15px;
+	margin: 10px;
 }
 img {
-	margin: 10px;
 	width: 100%;
 }

@@ -1,6 +1,7 @@
 
-body {
+.main {
 	padding: 10px;
+	background-color: black;
 }
 .row {
 	display: flex;

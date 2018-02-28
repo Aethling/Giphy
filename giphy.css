@@ -1,4 +1,13 @@
 
+.display-4 {
+	font-family: 'Plaster', cursive;
+}
+.jumbotron {
+	background-color: #f48642;
+}
+nav {
+	background-color: #e1edce
+}
 .main {
 	padding: 10px;
 	background-color: black;

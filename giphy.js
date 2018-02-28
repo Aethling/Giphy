@@ -12,8 +12,9 @@ $(document).ready(function(){
 		var thedata = $("input").val();
 		searchGifs(thedata);
 	});
+	trendingGifs();
+
 	function searchGifs(thedata) {
-		console.log(thedata);
 		var theurl = "http://api.giphy.com/v1/gifs/search?";
 		var data = {
 			api_key: "muuUmVthfqiLAze1NqapDnjKyXv0ehgI",
@@ -21,11 +22,9 @@ $(document).ready(function(){
 			limit: 25,
 			}
 		$.getJSON(theurl, data, function(xhr){
-			console.log(xhr);
 			var gifHTML;
 			$.each(xhr.data, function(i, item){
 				var html = '<img src="'+ item.images.fixed_width_downsampled.url + '">'
-				console.log(item);
 				if (i < 7) {				
 					gifHTML += html;
 					$(".column1").append(gifHTML);
@@ -47,22 +46,6 @@ $(document).ready(function(){
 		})
 	}
 
-	// function searchGifs(thedata) {
-	// 	var api_key = "muuUmVthfqiLAze1NqapDnjKyXv0ehgI&tag=&rating=G";
-	// 	var theurl = "http://api.giphy.com/v1/gifs/search";
-	// 	$.ajax({
-	// 		type: 'GET',
-	// 		url: theurl,
-	// 		q: thedata,
-	// 		api_key: api_key,
-	// 		limit: 25,
-	// 		success: addSearchResults() 
-	// // });
-	// // };
-				
-	// function addSearchResults(data) {
-	// 	}
-
 	function randomGif() {
 		var url = "https://api.giphy.com/v1/gifs/random?api_key=muuUmVthfqiLAze1NqapDnjKyXv0ehgI&tag=&rating=G"
 		$.getJSON(url, function(xhr){
@@ -71,7 +54,7 @@ $(document).ready(function(){
 		});
 	}
 	function trendingGifs() {
-		var url = "https://api.giphy.com/v1/gifs/search?api_key=muuUmVthfqiLAze1NqapDnjKyXv0ehgI&q=dance&rating=R"
+		var url = "https://api.giphy.com/v1/gifs/trending?api_key=muuUmVthfqiLAze1NqapDnjKyXv0ehgI&q=&rating=R"
 		$.getJSON(url, function(xhr){
 				var gifHTML;
 				$.each(xhr.data, function(i, item){

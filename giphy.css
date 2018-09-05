@@ -1,4 +1,6 @@
-
+body {
+	height: 100%;
+}
 .display-4 {
 	font-family: 'Plaster', cursive;
 }
@@ -11,6 +13,7 @@ nav {
 .main {
 	padding: 10px;
 	background-color: black;
+	height: 800px;
 }
 .row {
 	display: flex;

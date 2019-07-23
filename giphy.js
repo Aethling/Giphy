@@ -15,7 +15,7 @@ $(document).ready(function(){
 	trendingGifs();
 
 	function searchGifs(thedata) {
-		var theurl = "http://api.giphy.com/v1/gifs/search?";
+		var theurl = "https://api.giphy.com/v1/gifs/search?";
 		var data = {
 			api_key: "muuUmVthfqiLAze1NqapDnjKyXv0ehgI",
 			q: thedata,
